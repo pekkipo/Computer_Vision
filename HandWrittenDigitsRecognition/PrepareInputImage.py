@@ -5,7 +5,7 @@ import cv2
 # Define our functions
 
 def x_cord_contour(contour):
-    # This function take a contour from findContours
+    # This function takes a contour from findContours
     # it then outputs the x centroid coordinates
 
     if cv2.contourArea(contour) > 10:
@@ -13,7 +13,7 @@ def x_cord_contour(contour):
         return (int(M['m10' ] /M['m00']))
 
 def makeSquare(not_square):
-    # This function takes an image and makes the dimenions square
+    # This function takes an image and makes the dimensions square
     # It adds black pixels as the padding where needed
 
     BLACK = [0 ,0 ,0]

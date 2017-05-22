@@ -53,7 +53,7 @@ knn = cv2.KNearest()
 knn.train(train, train_labels)
 ret, result, neighbors, distance = knn.find_nearest(test, k=3)
 
-# Now we check the accuracy of classification
+# Now check the accuracy of classification
 # For that, compare the result with test_labels and check which are wrong
 matches = result == test_labels
 correct = np.count_nonzero(matches)

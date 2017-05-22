@@ -15,7 +15,7 @@ import PrepareInputImage as prep
     # Each character is 20x20 pixels
     # Use numpy array 50x100x20x20
     # i.e. 50 columns, 100 rows, 20 layers and 20 layers on top of that
-    # we flatten that 20x20 array, i.e. we have 20 rows and 20 columns, we append each row to the end of the first
+    # flatten that 20x20 array, i.e. have 20 rows and 20 columns, thus append each row to the end of the first
     # thus having 1 row and 400 columns
 
     # Split training data into 2 segments:
@@ -60,7 +60,7 @@ knn = cv2.ml.KNearest_create()
 knn.train(train, cv2.ml.ROW_SAMPLE, train_labels)
 ret, result, neighbors, distance = knn.findNearest(test, k=3)
 
-# Now we check the accuracy of classification
+# Now check the accuracy of classification
 # For that, compare the result with test_labels and check which are wrong
 matches = result == test_labels
 correct = np.count_nonzero(matches)
